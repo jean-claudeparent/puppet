@@ -17,11 +17,13 @@ class outilsdebase
 package { 'nano':
   ensure => installed,
 }
+exec { 'Ajouter Microsoft repo':
+        command =>'/media/sf_centos/puppet/modules/doit/scripts/MicrosoftRepo',
+    }
 
-package { 'dotnet-sdk-2.2  ':
-  ensure => installed,
-}
 
-
+package { 'powershel':
+  require => exec [ 'Ajouter Microsoft repo'],
+  ensure => installed}
 
 }

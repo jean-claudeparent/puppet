@@ -1,0 +1,4 @@
+if test ! -f /etc/yum.repos.d/microsoft.repo
+then
+curl https://packages.microsoft.com/config/rhel/7/prod.repo |  tee /etc/yum.repos.d/microsoft.repo
+fi
