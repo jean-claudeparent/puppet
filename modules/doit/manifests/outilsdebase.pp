@@ -17,6 +17,11 @@ class outilsdebase
 package { 'nano':
   ensure => installed,
 }
+
+package { 'openssl':
+  ensure => installed,
+}
+
 exec { 'Ajouter Microsoft repo':
         command =>'/media/sf_centos/puppet/modules/doit/scripts/MicrosoftRepo',
     }
