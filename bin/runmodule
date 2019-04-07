@@ -1,0 +1,3 @@
+echo log >/media/sf_centos/log/runmodule.txt 
+puppet apply -l /media/sf_centos/log/runmodule.txt --modulepath=/media/sf_centos/puppet/modules  -e "class {\"doit\":}"  
+cat /media/sf_centos/log/runmodule.txt

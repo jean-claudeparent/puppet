@@ -22,7 +22,7 @@ exec { 'Ajouter Microsoft repo':
     }
 
 
-package { 'powershel':
+package { 'powershell':
   require => exec [ 'Ajouter Microsoft repo'],
   ensure => installed}
 
